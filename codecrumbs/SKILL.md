@@ -1,6 +1,6 @@
 ---
 name: codecrumbs
-description: Learn, design, or document a codebase by placing breadcrumb comments (//cc:...) in source code and optionally visualizing them with the Codecrumbs tool. Use when exploring an unfamiliar codebase, documenting architecture or execution flows in-code, building ordered step trails across files, or auditing existing codecrumb comments. Supports any language with single-line comments.
+description: Learn, design, or document a TypeScript or Python codebase by placing breadcrumb comments (//cc: or # cc:) in source code and optionally visualizing them with the Codecrumbs tool. Use when exploring an unfamiliar TS/Python codebase, documenting architecture or execution flows in-code, building ordered step trails across files, or auditing existing codecrumb comments.
 license: BSD-3-Clause
 compatibility: Works convention-first with no install. Optional live visualization requires Node.js >= 8.11.1 and the codecrumbs npm package.
 metadata:
@@ -42,14 +42,11 @@ prefix) must begin with `cc` or `codecrumb` followed by `:`; parameters are
 
 | Languages | Prefix | Example |
 |---|---|---|
-| JS, TS, Java, C#, C++, Go, Kotlin, PHP | `//` | `//cc:main function` |
-| Python, Ruby, Perl | `#` | `# cc:main function` |
-| Haskell, Lua | `--` | `-- cc:main function` |
-| Fortran | `!` | `! cc: main function` |
-| OCaml | `/* */` | `/* cc:main function */` |
+| TypeScript | `//` | `//cc:main function` |
+| Python | `#` | `# cc:main function` |
 
-The trailing-text convention (`cc:`) is identical in every language — only the
-comment token changes. See `references/language-support.md` for the full matrix.
+The trailing-text convention (`cc:`) is identical in both — only the comment
+token changes. See `references/language-support.md` for details.
 
 ## Workflows
 
@@ -89,8 +86,8 @@ process per repo; all instances sync into one browser view. Full reference:
 
 ## Pitfalls
 
-- Only single-line comments are parsed — block-comment crumbs (except OCaml-style
-  single-line `/* ... */`) are invisible.
+- Only single-line comments are parsed — `//` in TypeScript, `#` in Python.
+  Block-comment crumbs are invisible.
 - `cc:` must be the start of the comment text; `// note: cc:x` is not a crumb.
 - Step numbers are per-trail, not per-file; two crumbs in the same trail must not
   share a step number.
