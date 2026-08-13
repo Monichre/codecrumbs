@@ -44,6 +44,7 @@ prefix) must begin with `cc` or `codecrumb` followed by `:`; parameters are
 |---|---|---|
 | JS, TS, Java, C#, C++, Go, Kotlin, PHP | `//` | `//cc:main function` |
 | Python, Ruby, Perl | `#` | `# cc:main function` |
+| Haskell, Lua | `--` | `-- cc:main function` |
 | Fortran | `!` | `! cc: main function` |
 | OCaml | `/* */` | `/* cc:main function */` |
 

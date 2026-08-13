@@ -10,7 +10,9 @@ Only the comment token changes per language.
 | C# | `//` | `//cc:main function` |
 | C++ | `//` | `//cc:main function` |
 | Go | `//` | `// cc:main function` |
+| Haskell | `--` | `-- cc:main function` |
 | Kotlin | `//` | `//cc:main function` |
+| Lua | `--` | `-- cc:main function` |
 | PHP | `//` | `//cc:main function` |
 | Python | `#` | `# cc:main function` |
 | Ruby | `#` | `# cc:main function` |
